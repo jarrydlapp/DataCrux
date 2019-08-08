@@ -1,0 +1,63 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <ApplicationIcon />
+    <StartupObject />
+    <Configurations>Debug;Release;Package</Configurations>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Jarryd Lapp</Authors>
+    <Description>Data Randomizer Library that generates random data points.</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <Copyright>2019</Copyright>
+    <PackageId>DataCrux.DataGenerator</PackageId>
+    <Version>1.0.0</Version>
+    <Company />
+    <Product>DataCrux Data Generator Library</Product>
+    <PackageTags>Data Randomizer TestData Helpers</PackageTags>
+    <PackageReleaseNotes>This is the initial release</PackageReleaseNotes>
+    <RepositoryUrl>https://jarrydlapp@dev.azure.com/jarrydlapp/DataCrux/_git/DataCrux</RepositoryUrl>
+    <RepositoryType>GIT</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ResourceFiles\Resources.dist.companynames.stripped" />
+    <None Remove="ResourceFiles\Resources.dist.positions.stripped" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="ResourceFiles\Resources.dist.positions.stripped">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceFiles\Resources.dist.companynames.stripped">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceFiles\Resources.dist.citystate.stripped">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceFiles\Resources.dist.street.name.stripped">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceFiles\Resources.dist.street.suffix.stripped">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceFiles\Resources.dist.street.prefix.stripped">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceFiles\Resources.dist.male.suffix.stripped">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceFiles\Resources.dist.all.last.stripped">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceFiles\Resources.dist.female.first.stripped">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResourceFiles\Resources.dist.male.first.stripped">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
