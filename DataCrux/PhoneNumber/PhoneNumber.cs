@@ -1,7 +1,4 @@
 ﻿using DataCrux.Randomizer;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DataCrux.PhoneNumberGenerator
 {
@@ -13,14 +10,10 @@ namespace DataCrux.PhoneNumberGenerator
         /// <summary>
         /// Returns Unformated Phone Number ##########
         /// </summary>
-        public string Number { get; set; }
-        /// <summary>
-        /// Returns formatted Phone Number ###-###-####
-        /// </summary>
-        public string NumberFormatted { get; set; }
-        public string AreaCode { get; set; }
-        public string Prefix { get; set; }
-        public string LineNumber { get; set; }
+        public string Number { get; set; }       
+        private string AreaCode { get; set; }
+        private string Prefix { get; set; }
+        private string LineNumber { get; set; }
 
         public PhoneNumber()
         {
@@ -29,7 +22,7 @@ namespace DataCrux.PhoneNumberGenerator
             Prefix = _prefix;
             LineNumber = _linenumber;
             Number = $"{AreaCode}{Prefix}{LineNumber}";
-            NumberFormatted = $"{AreaCode}-{Prefix}-{LineNumber}";
+           
         }
         /// <summary>
         /// Generate the Random segments of the phonenumber
@@ -41,7 +34,14 @@ namespace DataCrux.PhoneNumberGenerator
             _linenumber = DataRandomizer.GenearteRandomNumber(4);
         }
 
-        
-
+        /// <summary>
+        /// Returns the phone number formatted ###-###-####
+        /// </summary>
+  
+        /// <returns></returns>
+        public string Formatted()
+        {
+            return $"{AreaCode}-{Prefix}-{LineNumber}";
+        }  
     }
 }

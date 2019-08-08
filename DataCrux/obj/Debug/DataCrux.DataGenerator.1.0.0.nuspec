@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>DataCrux.DataGenerator</id>
+    <version>1.0.0</version>
+    <authors>Jarryd Lapp</authors>
+    <owners>Jarryd Lapp</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <description>Data Randomizer Library that generates random data points.</description>
+    <releaseNotes>This is the initial release</releaseNotes>
+    <copyright>2019</copyright>
+    <tags>Data Randomizer TestData Helpers</tags>
+    <repository type="GIT" url="https://jarrydlapp@dev.azure.com/jarrydlapp/DataCrux/_git/DataCrux" />
+    <dependencies>
+      <group targetFramework=".NETCoreApp2.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Jarryd\Desktop\DataCrux\DataCrux\bin\Debug\netcoreapp2.1\DataCrux.dll" target="lib\netcoreapp2.1\DataCrux.dll" />
+  </files>
+</package>

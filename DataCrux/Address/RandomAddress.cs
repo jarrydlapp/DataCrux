@@ -7,6 +7,9 @@ using DataCrux.BaseGenerator;
 
 namespace DataCrux.Address
 {
+    /// <summary>
+    /// Generates a random US address
+    /// </summary>
     public class RandomAddress : BaseDataGenerator
     {
         private const string _deliminator = "|";
@@ -131,7 +134,7 @@ namespace DataCrux.Address
         /// Returns full address
         /// </summary>
         /// <returns></returns>
-        internal string GetFullAddress()
+        public string GetFullAddress()
         {
             return Street.Prefix == null
                ? $"{Number} {Street.Name} {Street.Suffix} \n{City}, {State} {Zipcode}"

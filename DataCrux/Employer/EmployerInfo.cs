@@ -23,7 +23,7 @@ namespace DataCrux.Employer
             CompanyName = new CompanyName().Employer;
             EmployerAddress = new RandomAddress();
             WorkPhoneNumber = new PhoneNumber();
-            PhoneNumber = WorkPhoneNumber.NumberFormatted;
+            PhoneNumber = WorkPhoneNumber.Formatted();
             WorkEmail = new EmailAddress(CompanyName).Email;
         }
         public EmployerInfo(bool status)
@@ -41,7 +41,7 @@ namespace DataCrux.Employer
                 CompanyName = new CompanyName().Employer;
                 EmployerAddress = new RandomAddress();
                 WorkPhoneNumber = new PhoneNumber();
-                PhoneNumber = WorkPhoneNumber.NumberFormatted;
+                PhoneNumber = WorkPhoneNumber.Formatted();
                 WorkEmail = new EmailAddress(CompanyName).Email;
                
             }

@@ -1,23 +1,37 @@
 ﻿using DataCrux.BaseGenerator;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace DataCrux.Name
 { 
     public class PersonName : BaseDataGenerator
     {       
-          public enum Gender
+        public enum Gender
         {
             Male = 1,
             Female = 0
         }
-        internal bool IsMaleName = false;
+
+        private bool IsMaleName = false;
+        /// <summary>
+        /// Randomized First Name
+        /// </summary>
         public string First { get; set; }
+        /// <summary>
+        /// Randomized Middle Name
+        /// </summary>
         public string Middle { get; set; }
+        /// <summary>
+        /// Randomized Last Name
+        /// </summary>
         public string Last { get; set; }
+        /// <summary>
+        /// Randomized Suffix
+        /// </summary>
         public string Suffix { get; set; }
+        /// <summary>
+        /// Randomized Gender
+        /// </summary>
         public Gender Sex { get; set; }
 
         private const string MaleFile = "dist.male.first.stripped";
@@ -39,31 +53,62 @@ namespace DataCrux.Name
             Middle = GenerateMiddleName();
             Last = GenerateLastName();
             Suffix = GenerateSuffix(); 
-        }        
-     
+        }             
+
         private bool RandomlyPickIfNameIsMale()
         {
             IsMaleName = RandGen.Next(0, 2) == 0;
             return IsMaleName;
         }
-                      
+
+        /// <summary>
+        /// Returns full name of a person
+        /// </summary>
+        /// <returns></returns>
+        public string GetFullName()
+        {
+            if (string.IsNullOrEmpty(Suffix))
+            {
+                return $"{First} {Middle} {Last}";
+            }
+            return $"{First} {Middle} {Last}, {Suffix}";
+        }
+
+        /// <summary>
+        /// Allows you to generate new first name
+        /// </summary>
+        /// <returns></returns>
         public string GenerateFirstName()
         {
             return !IsMaleName
                 ? GenerateFemaleFirstName()
                 : GenerateMaleFirstName();
-
         }
+
+        /// <summary>
+        /// Allows you to generate new last name
+        /// </summary>
+        /// <returns></returns>
         public string GenerateLastName()
         {
             return _lastNames.AsEnumerable().ElementAt(RandGen.Next(0, _lastNames.Count));
         }
+
+        /// <summary>
+        /// Allows you to generate new middle dame
+        /// </summary>
+        /// <returns></returns>
         public string GenerateMiddleName()
         {
             return !IsMaleName
                 ? GenerateFemaleFirstName()
                 : GenerateMaleFirstName();
         }
+
+        /// <summary>
+        /// Allows you to generate new suffix
+        /// </summary>
+        /// <returns></returns>
         public string GenerateSuffix()
         {
             if(Sex.Equals(Gender.Male))
@@ -72,6 +117,7 @@ namespace DataCrux.Name
             }
             return null;
         }
+
         private string GenerateFemaleFirstName()
         {
             var index = RandGen.Next(0, _femaleFirstNames.Count);                       
@@ -79,6 +125,7 @@ namespace DataCrux.Name
             
             return _femaleFirstNames.AsEnumerable().ElementAt(index);
         }
+
         private string GenerateMaleFirstName()
         {
             var index = RandGen.Next(0, _maleFirstNames.Count);
@@ -86,18 +133,21 @@ namespace DataCrux.Name
             
             return _maleFirstNames.AsEnumerable().ElementAt(index);
         }
+
         private string GenerateFemaleMiddleName()
         {
             var index = RandGen.Next(0, _femaleMiddleNames.Count);
 
             return _femaleMiddleNames.AsEnumerable().ElementAt(index);
         }
+
         private string GenerateMaleMiddleName()
         {
             var index = RandGen.Next(0, _maleMiddleNames.Count);
 
             return _maleFirstNames.AsEnumerable().ElementAt(index);
         }
+
         private string GenerateMaleSuffix()
         {
             var index = RandGen.Next(0, _maleSuffix.Count);
@@ -123,7 +173,5 @@ namespace DataCrux.Name
 
             _lastNames = ReadResourceByLine(LastNameFile);
         }
-
-
     }
 }

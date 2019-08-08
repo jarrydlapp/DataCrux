@@ -9,11 +9,3 @@ C:\Users\Jarryd\source\repos\DataCrux\DataCrux\obj\Debug\netcoreapp2.1\DataCrux.
 C:\Users\Jarryd\source\repos\DataCrux\DataCrux\obj\Debug\netcoreapp2.1\DataCrux.dll
 C:\Users\Jarryd\source\repos\DataCrux\DataCrux\obj\Debug\netcoreapp2.1\DataCrux.pdb
 C:\Users\Jarryd\source\repos\DataCrux\DataCrux\obj\Debug\netcoreapp2.1\DataCrux.csprojAssemblyReference.cache
-C:\Users\Jarryd\Desktop\DataCrux\DataCrux\bin\Debug\netcoreapp2.1\DataCrux.deps.json
-C:\Users\Jarryd\Desktop\DataCrux\DataCrux\bin\Debug\netcoreapp2.1\DataCrux.dll
-C:\Users\Jarryd\Desktop\DataCrux\DataCrux\bin\Debug\netcoreapp2.1\DataCrux.pdb
-C:\Users\Jarryd\Desktop\DataCrux\DataCrux\obj\Debug\netcoreapp2.1\DataCrux.csproj.CoreCompileInputs.cache
-C:\Users\Jarryd\Desktop\DataCrux\DataCrux\obj\Debug\netcoreapp2.1\DataCrux.AssemblyInfoInputs.cache
-C:\Users\Jarryd\Desktop\DataCrux\DataCrux\obj\Debug\netcoreapp2.1\DataCrux.AssemblyInfo.cs
-C:\Users\Jarryd\Desktop\DataCrux\DataCrux\obj\Debug\netcoreapp2.1\DataCrux.dll
-C:\Users\Jarryd\Desktop\DataCrux\DataCrux\obj\Debug\netcoreapp2.1\DataCrux.pdb

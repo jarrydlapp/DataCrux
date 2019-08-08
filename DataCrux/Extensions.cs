@@ -7,24 +7,7 @@ namespace DataCrux.Extensions
 {
     public static class Extensions
     {
-        /// <summary>
-        /// Returns the Phone Number unformatted ##########
-        /// </summary>
-        /// <param name="str"></param>
-        /// <returns></returns>
-        public static string Formatted(this PhoneNumber str)
-        {
-            return str.NumberFormatted;                
-        }
-        /// <summary>
-        /// Returns the Phone Number formatted ###-###-####
-        /// </summary>
-        /// <param name="str"></param>
-        /// <returns></returns>
-        public static string UnFormatted(this PhoneNumber str)
-        {
-            return str.Number;
-        }
+      
         /// <summary>
         /// Returns a string parsed as a num.
         /// </summary>
@@ -62,6 +45,8 @@ namespace DataCrux.Extensions
             }
             return new string(array);
         }
+
+        
 
     }
 }

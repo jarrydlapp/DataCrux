@@ -9,9 +9,13 @@ using DataCrux.Employer;
 
 namespace DataCrux
 {
+    /// <summary>
+    /// Parent class of DataCrux. When Initialized a single person object will have
+    /// several data points generated for use within the object.
+    /// </summary>
     public class Person
     {  
-        public enum MaritalStat
+        private enum MaritalStat
         {
             Single =1,
             Married = 2,
@@ -19,6 +23,9 @@ namespace DataCrux
             Divorice = 4
         }
 
+        /// <summary>
+        /// Initializes PersonName class to generate a new name for a person.
+        /// </summary>
         public PersonName Name {get;set;}
         /// <summary>
         /// Random Date of Birth as a DateTime. If you want to output
@@ -26,19 +33,54 @@ namespace DataCrux
         /// at the end of your member.
         /// </summary>
         public DateTime DateOfBirth { get; set; }
-        public string Age { get; set; }
-        public string SSN { get; set; }
+        /// <summary>
+        /// Randomzied Age for a Person. 
+        /// Age generated will not be more than 105 years old
+        /// </summary>
+        public string Age { get; set; } 
+        /// <summary>
+        /// Generates a random place of birth for a person.
+        /// Returns City, State in a single string. 
+        /// </summary>
         public string PlaceOfBirth { get; set; }
+        /// <summary>
+        /// Generates a random email address and performs
+        /// email format validation.
+        /// </summary>
         public string Email { get; set; }
+        /// <summary>
+        /// Generates and returns a randomized phone number.
+        /// </summary>
         public PhoneNumber HomePhoneNumber { get; set; }
+        /// <summary>
+        /// Generates and returns a randomized phone number.
+        /// </summary>
         public PhoneNumber MobilePhoneNumber { get; set; }
+        /// <summary>
+        /// Gets Gender based on the Name picked
+        /// </summary>
         public string Gender { get; set; }
+        /// <summary>
+        /// Generates and returns a randomized US based address
+        /// </summary>
         public RandomAddress Address { get; set;}
         public string MaritalStatus { get; set; }
-        public int? Dependents { get; set; }
-        public RandomAddress HomeAddress { get; set; }
+        /// <summary>
+        /// Randomly Generates int for 0-5 dependents  
+        /// </summary>
+        public int? Dependents { get; set; }   
+        /// <summary>
+        /// Generates if the Person is employed or not.
+        /// </summary>
         public bool EmploymentStatus { get; set; }
-        public EmployerInfo Employer { get; set; }    
+        /// <summary>
+        /// Generates Employer Information for the Person
+        /// </summary>
+ 
+        public EmployerInfo Employer { get; set; }
+        /// <summary>
+        /// Generates a valid SSN based on the Social Security Administration Standards
+        /// </summary>
         public string SocialSecurityNumber {get;set;}
                
         public Person()
@@ -56,10 +98,8 @@ namespace DataCrux
             MaritalStatus = GetRandomMaritalStatus(RandomlyPickMaritalStatus(), Name.Sex);
             EmploymentStatus =  IsPersonEmployed();
             Dependents = GenerateDependents();
-            Employer = new EmployerInfo(EmploymentStatus);
-          
-        }
- 
+            Employer = new EmployerInfo(EmploymentStatus);          
+        }  
 
         /// <summary>
         /// Generates a random date of birth

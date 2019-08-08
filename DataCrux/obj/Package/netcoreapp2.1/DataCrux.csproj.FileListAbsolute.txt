@@ -1,7 +1,6 @@
 C:\Users\Jarryd\Desktop\DataCrux\DataCrux\bin\Package\netcoreapp2.1\DataCrux.deps.json
 C:\Users\Jarryd\Desktop\DataCrux\DataCrux\bin\Package\netcoreapp2.1\DataCrux.dll
 C:\Users\Jarryd\Desktop\DataCrux\DataCrux\bin\Package\netcoreapp2.1\DataCrux.pdb
-C:\Users\Jarryd\Desktop\DataCrux\DataCrux\obj\Package\netcoreapp2.1\DataCrux.csprojAssemblyReference.cache
 C:\Users\Jarryd\Desktop\DataCrux\DataCrux\obj\Package\netcoreapp2.1\DataCrux.csproj.CoreCompileInputs.cache
 C:\Users\Jarryd\Desktop\DataCrux\DataCrux\obj\Package\netcoreapp2.1\DataCrux.AssemblyInfoInputs.cache
 C:\Users\Jarryd\Desktop\DataCrux\DataCrux\obj\Package\netcoreapp2.1\DataCrux.AssemblyInfo.cs
